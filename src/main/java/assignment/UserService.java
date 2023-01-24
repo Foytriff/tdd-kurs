@@ -20,7 +20,6 @@ public class UserService {
     }
 
     public User findByUsername(String username) {
-        return null;
-        //return userRepo.getUserByUsername(username).orElseThrow();
+        return userRepo.getUserByUsername(username).orElseThrow();
     }
 }
