@@ -28,6 +28,16 @@ public class UserTest {
         assertEquals(username, user.getUsername());
         assertEquals(password, user.getPassword());
 
+    }
+
+    @Test
+    public void user_with_matching_username_is_considered_same_object(){
+
+        User user;
+
+        user = new User("Jörgen", "hemligt");
+
+        assertEquals(new User("Jörgen", "annatLösen"), user);
 
     }
 }
