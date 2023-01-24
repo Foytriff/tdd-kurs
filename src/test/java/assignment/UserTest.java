@@ -40,4 +40,14 @@ public class UserTest {
         assertEquals(new User("Jörgen", "annatLösen"), user);
 
     }
+
+    @Test
+    public void username_ignores_casing(){
+        User user;
+
+        user = new User("JöRgeN", "hemligt");
+
+        assertEquals(new User("jörgen", "annatLösen"), user);
+
+    }
 }
