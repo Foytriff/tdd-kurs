@@ -13,7 +13,7 @@ public class UserService {
     }
 
     public boolean authenticate(User user, String password){
-        return false;
+        return user.getPassword().equals(password);
     }
 
     public User findByUsername(String username) {
