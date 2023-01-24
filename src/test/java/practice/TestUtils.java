@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
 
@@ -14,16 +17,11 @@ public class TestUtils {
     @Test
     public void helloW(){
         //Given
-        Utils utils;
-        //When
-        Utils test = new Utils(10, "tioåring");
-        //Then
-        assertAll(
-                () -> assertNotNull(test),
-                () -> assertEquals(10, test.getAge()),
-                () -> assertEquals("tioåring", test.getName()),
-                () -> assertEquals(new Utils(10, "tioåring"), test)
+        int a = 5;
+        int b = 0;
 
-        );
+        //When
+        //Then
+        assertThrows(Exception.class, () -> Utils.divide(a,b));
     }
 }
