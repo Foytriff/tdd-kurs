@@ -12,10 +12,7 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-    public boolean authenticate(String username, String password){
-
-
-
+    public boolean authenticate(User user, String password){
         return false;
     }
 

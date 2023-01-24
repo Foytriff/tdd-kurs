@@ -27,8 +27,8 @@ public class UserServiceTest {
 
         User user = userService.findByUsername(username);
 
-        //boolean authenticated = userService.authenticate(user.getUsername(), user.getPassword());
+        boolean authenticated = userService.authenticate(user, password);
 
-        assertEquals(new User("jöns", "gillarhöns"), user);
+        assertTrue(authenticated);
     }
 }
